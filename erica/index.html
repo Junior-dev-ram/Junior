@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Solar System</title>
+        <script src="script/aframe.min.js"></script>
+    
+    
+    
+        <a-assets>
+            <img id="sun" src="texture\2k_sun.jpg">
+        
+            <img id="mercury" src="texture\2k_mercury.jpg" >
+        
+            <img id="venus" src="texture/2k_venus_surface.jpg">
+        
+        
+            <img id="earth" src="texture\2k_earth_daymap.jpg">
+            <img id="earth-nrm" src="solar-system\texture\2k_earth_normal_map.tif">
+            
+            <img id="moon" src="texture\2k_moon.jpg" >
+        
+        
+            <img id="mars" src="texture\2k_mars.jpg" >
+            
+            <img id="jupiter" src="texture\2k_jupiter.jpg">
+            
+            <img id="saturn" src="texture\2k_saturn.jpg" >
+            <img id="saturnRingTexture" src="texture\2k_saturn_ring_alpha.png" >
+            
+            <img id="uranus" src="texture\2k_uranus.jpg" >
+            
+            <img id="neptune" src="texture\2k_neptune.jpg" >
+            <img  id="stars" src="" alt="texture\2k_stars_milky_way.jpg">
+            <img   src="texture\2k_stars.jpg" id="stars-nrm">
+          </a-assets>
+          </head>
+          <body>
+            <a-scene>
+        
+                <a-entity>
+                <a-torus color="gray" radius-tubular="0.1" radius="240" arc="360" rotation="90 90 90" segments-tubular="200"></a-torus>
+                <a-torus color="gray" radius-tubular="0.1" radius="220"  rotation="90 90 90"segments-tubular="200" ></a-torus>
+                <a-torus color="gray" radius-tubular="0.1" radius="195" rotation="90 90 90" segments-tubular="200"></a-torus>
+                <a-torus color="gray" radius-tubular="0.1" radius="165" rotation="90 90 90" segments-tubular="200"></a-torus>
+                <a-torus color="gray" radius-tubular="0.1" radius="135" rotation="90 90 90" segments-tubular="200"></a-torus>
+                <a-torus color="gray" radius-tubular="0.1" radius="105" rotation="90 90 90" segments-tubular="200"></a-torus>
+                <a-torus color="gray" radius-tubular="0.1" radius="75" rotation="90 90 90" segments-tubular="200"></a-torus>
+                <a-torus color="gray" radius-tubular="0.1" radius="50" arc="360" rotation="90 90 90" segments-tubular="200"></a-torus>
+                </a-entity>
+        
+                
+               
+                <a-sphere radius="20" src="texture\2k_sun.jpg" position="0 0 0" material="shader:flat;" type="point"></a-sphere><a-entity id="basic-light" light="type: ambient; color: #BBB"></a-entity>
+                <a-entity animation="property: rotation; to: 0 360 0; loop:true; dur:20000s; easing:linear;">
+                <a-sphere radius="8" src="#mercury" position="50 0 0" ></a-sphere>
+                </a-entity>
+                <a-entity animation="property: rotation; to: 0 360 0; loop:true; dur:25000s; easing:linear;">
+                <a-sphere radius="9" src="#venus" position="75 0 0" ></a-sphere>
+                </a-entity>
+                <a-entity animation="property: rotation; to: 0 360 0; loop:true; dur:30000s; easing:linear;">
+                    <a-sphere radius="12" src="#earth" position="105 0 0" ></a-sphere>
+                    <a-entity animation="property: rotation; to: 360 0 0; loop:true; dur:3474s; easing:linear;">
+                        <a-sphere radius="5" src="#moon" position="105 0 -20" ></a-sphere>
+                    </a-entity>
+                </a-entity>
+                <a-entity animation="property: rotation; to: 0 360 0; loop:true; dur:35000s; easing:linear;">
+                <a-sphere radius="7" src="#mars" position="134.56497 0 0" ></a-sphere>
+                </a-entity>
+                <a-entity animation="property: rotation; to: 0 360 0; loop:true; dur:40000s; easing:linear;">
+                <a-sphere radius="15" src="#jupiter" position="164.85805 0 0" ></a-sphere>
+                </a-entity>
+                <a-entity animation="property: rotation; to: 0 360 0; loop:true; dur:45000s; easing:linear;">
+                <a-sphere radius="10" src="#saturn" position="194.2093 -1.52022 0.83019" ></a-sphere>
+                <a-ring position="194.5617 -5 1.07486" rotation="45" radius-inner="11" src="#rings" radius-outer="12.5"></a-ring>
+                </a-entity>
+                <a-entity animation="property: rotation; to: 0 360 0; loop:true; dur:50000s; easing:linear;">
+                <a-sphere radius="9" src="#neptune" position="220 0 0" ></a-sphere>
+                </a-entity>
+                <a-entity animation="property: rotation; to: 0 360 0; loop:true; dur:55000s; easing:linear;">
+                <a-sphere radius="6" src="#uranus" position="240 0 0" ></a-sphere>
+                </a-entity>
+           
+                <a-sky src="texture\2k_stars_milky_way.jpg" ></a-sky>
+                <a-sky src="texture\2k_stars.jpg" ></a-sky>
+            
+                </a-entity>
+                <a-camera position="0 50 90"></a-camera>
+            </a-scene>
+            
+        </body>
+        </html>
+        <a-ring position="194.5617 -5 1.07486" rotation="0 0 0" radius-inner="11" radius-outer="12.5" sided="double"></a-ring>
+          
+        
+</html>
