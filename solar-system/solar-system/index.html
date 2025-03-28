@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="script/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: black">
+
+      <!-- Milky Way Background -->
+      <a-sky src="texture/2k_stars_milky_way.jpg"></a-sky>
+
+      <!-- Sun -->
+      <a-entity id="sun" position="0 1 -10"
+        animation="property: rotation; 
+                   to: 0 360 0; 
+                   dur: 10000; 
+                   easing: linear; 
+                   loop: true">
+        <a-sphere src="texture/2k_sun.jpg" radius="2"></a-sphere>
+        <a-text value="SUN" position="0 3 0" align="center" color="yellow"></a-text>
+      </a-entity>
+
+      <!-- Mercury revolving -->
+      <a-entity position="0 1 -10" 
+        animation="property: rotation; 
+                   to: 0 360 0; 
+                   dur: 4000; 
+                   easing: linear; 
+                   loop: true">
+        <a-entity position="3 0 0">
+          <a-sphere src="texture/2k_mercury.jpg" radius="0.3"></a-sphere>
+          <a-text value="MERCURY" position="0 1 0" align="center" color="white"></a-text>
+        </a-entity>
+      </a-entity>
+
+      <!-- Venus revolving -->
+      <a-entity position="0 1 -10" 
+        animation="property: rotation; 
+                   to: 0 360 0; 
+                   dur: 6000; 
+                   easing: linear; 
+                   loop: true">
+        <a-entity position="4.5 0 0">
+          <a-sphere src="texture/2k_venus_surface.jpg" radius="0.5"></a-sphere>
+          <a-text value="VENUS" position="0 1 0" align="center" color="white"></a-text>
+        </a-entity>
+      </a-entity>
+
+      <!-- Earth and Moon revolving -->
+      <a-entity position="0 1 -10" 
+        animation="property: rotation; 
+                   to: 0 360 0; 
+                   dur: 8000; 
+                   easing: linear; 
+                   loop: true">
+        <a-entity position="6 0 0">
+          <a-sphere src="texture/2k_earth_daymap.jpg" radius="0.6"></a-sphere>
+          <a-text value="EARTH" position="0 1 0" align="center" color="white"></a-text>
+          <a-sphere src="texture/2k_moon.jpg" radius="0.15" position="1 0 0"></a-sphere>
+          <a-text value="MOON" position="1 0.5 0" color="gray" align="center"></a-text>
+        </a-entity>
+      </a-entity>
+
+      <!-- Mars revolving -->
+      <a-entity position="0 1 -10" 
+        animation="property: rotation; 
+                   to: 0 360 0; 
+                   dur: 10000; 
+                   easing: linear; 
+                   loop: true">
+        <a-entity position="8 0 0">
+          <a-sphere src="texture/2k_mars.jpg" radius="0.5"></a-sphere>
+          <a-text value="MARS" position="0 1 0" align="center" color="white"></a-text>
+        </a-entity>
+      </a-entity>
+
+      <!-- Jupiter revolving -->
+      <a-entity position="0 1 -10" 
+        animation="property: rotation; 
+                   to: 0 360 0; 
+                   dur: 12000; 
+                   easing: linear; 
+                   loop: true">
+        <a-entity position="10 0 0">
+          <a-sphere src="texture/2k_jupiter.jpg" radius="1.3"></a-sphere>
+          <a-text value="JUPITER" position="0 1.3 0" align="center" color="white"></a-text>
+        </a-entity>
+      </a-entity>
+
+      <!-- Saturn revolving -->
+      <a-entity position="0 1 -10" 
+        animation="property: rotation; 
+                   to: 0 360 0; 
+                   dur: 14000; 
+                   easing: linear; 
+                   loop: true">
+        <a-entity position="12 0 0">
+          <a-sphere src="texture/2k_saturn.jpg" radius="1"></a-sphere>
+          <a-ring src="texture/2k_saturn_ring_alpha.png"
+                  radius-inner="1.2"
+                  radius-outer="1.8"
+                  rotation="90 30 0">
+          </a-ring>
+          <a-text value="SATURN" position="0 2 0" align="center" color="white"></a-text>
+        </a-entity>
+      </a-entity>
+
+      <!-- Uranus revolving -->
+      <a-entity position="0 1 -10" 
+        animation="property: rotation; 
+                   to: 0 360 0; 
+                   dur: 16000; 
+                   easing: linear; 
+                   loop: true">
+        <a-entity position="14 0 0">
+          <a-sphere src="texture/2k_uranus.jpg" radius="0.8"></a-sphere>
+          <a-text value="URANUS" position="0 1.2 0" align="center" color="white"></a-text>
+        </a-entity>
+      </a-entity>
+
+      <!-- Neptune revolving -->
+      <a-entity position="0 1 -10" 
+        animation="property: rotation; 
+                   to: 0 360 0; 
+                   dur: 18000; 
+                   easing: linear; 
+                   loop: true">
+        <a-entity position="16 0 0">
+          <a-sphere src="texture/2k_neptune.jpg" radius="0.7"></a-sphere>
+          <a-text value="NEPTUNE" position="0 1.2 0" align="center" color="white"></a-text>
+        </a-entity>
+      </a-entity>
+
+      <!-- Camera with explicit navigation controls -->
+      <a-entity 
+        camera 
+        position="0 5 15" 
+        look-controls="enabled: true" 
+        wasd-controls="enabled: true"
+      ></a-entity>
+
+    </a-scene>
+  </body>
+</html>
